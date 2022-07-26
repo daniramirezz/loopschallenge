@@ -33,4 +33,19 @@ let recipes = [
 
 let recCont
 
+for (let i = 0; i < recipes.length; i++) {
+    recCont = document.createElement("div");
+    recCont.innerHTML = `
+      <h1>${recipes[i].title}</h1>
+      <h3>TIME: ${recipes[i].time}</h3>
+      <h3>Calories${recipes[i].calories}</h3>
+      <h3> Ingredients </h3> ${recipes[i].ingredients.map(ingredients => 
+        { return `<p> ${ingredients}</p`})}</h3>
+      `
+  }
+
+
+
+
+
 // HINT: Using .map will be very helpful when itterating through the ingredients array.
